@@ -1,6 +1,6 @@
 # Roost Transactions
 
-The transactions app is a [Next.js](https://nextjs.org/) application to view transactions for a Coop's bank account.
+The transactions app is a [Next.js](https://nextjs.org/) application to view transactions for a coop's bank account.
 
 ## Getting Started
 
