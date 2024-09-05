@@ -8,7 +8,7 @@ describe('money helpers', () => {
       ${14}       | ${4}      | ${[4, 4, 3, 3]}
       ${15}       | ${4}      | ${[4, 4, 4, 3]}
       ${100}      | ${1}      | ${[100]}
-    `('splits $amount into $split equal groups', ({amount, split, output}) => {
+    `('splits $amount into $split equal amounts', ({amount, split, output}) => {
       expect(splitMoneyEvenly(amount, split)).toEqual(output);
     })
 
