@@ -28,14 +28,14 @@ describe('money helpers', () => {
       amount      | ratios            | output
       ${12}       | ${[3, 2, 1]}      | ${[6, 4, 2]}
       ${12}       | ${[2, 3, 1]}      | ${[4, 6, 2]}
-      ${14}       | ${[1, 3, 1, 1]}   | ${[3, 7, 2, 2]}
+      ${14}       | ${[1, 3, 1, 1]}   | ${[2, 8, 2, 2]}
+      ${15}       | ${[1, 3, 3, 1]}   | ${[2, 6, 6, 1]}
       ${100}      | ${[1]}            | ${[100]}
     `('splits $amount into the correct amounts based on ratios: $ratios', ({amount, ratios, output}) => {
       expect(splitMoneyByRatio(amount, ratios)).toEqual(output);
     })
 
     it('throws an error if amount cannot be split', () => {
-
       expect(() => {
         expect(splitMoneyByRatio(0, [1, 2]))
       }).toThrowError('Amount must be a positive number');
